@@ -152,6 +152,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="avatarImgView" destination="HXy-w4-xR3" id="5qk-A2-iK5"/>
+                                            <outlet property="nameLabel" destination="kaw-FQ-pjy" id="dqF-yx-ltS"/>
+                                            <outlet property="screennameLabel" destination="AKC-93-YuM" id="R57-0e-olR"/>
+                                            <outlet property="timestampLabel" destination="RPs-tb-oNc" id="UFs-vg-6zP"/>
+                                            <outlet property="tweetTextLabel" destination="WBv-ix-9rj" id="wEu-Cu-bnD"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageTweetCell" rowHeight="310" id="ILl-dl-gGF" customClass="ImageTweetCell" customModule="TwitterTestTask" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="178" width="320" height="310"/>
@@ -249,6 +256,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="avatarImgView" destination="wJM-CZ-J6T" id="TCJ-61-2dD"/>
+                                            <outlet property="nameLabel" destination="GH3-yC-GBO" id="i0T-zr-I6Y"/>
+                                            <outlet property="screennameLabel" destination="yHK-kJ-mmq" id="zLf-bF-Znb"/>
+                                            <outlet property="timestampLabel" destination="J3t-vc-b3j" id="dwE-3p-3ei"/>
+                                            <outlet property="tweetImageView" destination="t49-11-X0b" id="Wkm-A9-WeH"/>
+                                            <outlet property="tweetTextLabel" destination="ikF-jR-8Ru" id="gXI-P8-GpL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
