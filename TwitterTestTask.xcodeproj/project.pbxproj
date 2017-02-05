@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		EE9E1C1C1E47C3BD0074B1F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C1B1E47C3BD0074B1F6 /* AppDelegate.swift */; };
-		EE9E1C1E1E47C3BD0074B1F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C1D1E47C3BD0074B1F6 /* ViewController.swift */; };
 		EE9E1C211E47C3BD0074B1F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9E1C1F1E47C3BD0074B1F6 /* Main.storyboard */; };
 		EE9E1C241E47C3BD0074B1F6 /* TwitterTestTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C221E47C3BD0074B1F6 /* TwitterTestTask.xcdatamodeld */; };
 		EE9E1C261E47C3BD0074B1F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9E1C251E47C3BD0074B1F6 /* Assets.xcassets */; };
 		EE9E1C291E47C3BD0074B1F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9E1C271E47C3BD0074B1F6 /* LaunchScreen.storyboard */; };
+		EE9E1C311E47DEC90074B1F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C301E47DEC90074B1F6 /* LoginViewController.swift */; };
+		EE9E1C331E47DEDF0074B1F6 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C321E47DEDF0074B1F6 /* FeedViewController.swift */; };
+		EE9E1C351E47DEEC0074B1F6 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C341E47DEEC0074B1F6 /* TweetViewController.swift */; };
+		EE9E1C371E47DEF40074B1F6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C361E47DEF40074B1F6 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EE9E1C181E47C3BC0074B1F6 /* TwitterTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9E1C1B1E47C3BD0074B1F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EE9E1C1D1E47C3BD0074B1F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE9E1C201E47C3BD0074B1F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE9E1C231E47C3BD0074B1F6 /* TwitterTestTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TwitterTestTask.xcdatamodel; sourceTree = "<group>"; };
 		EE9E1C251E47C3BD0074B1F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE9E1C281E47C3BD0074B1F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE9E1C2A1E47C3BD0074B1F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE9E1C301E47DEC90074B1F6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EE9E1C321E47DEDF0074B1F6 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		EE9E1C341E47DEEC0074B1F6 /* TweetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
+		EE9E1C361E47DEF40074B1F6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				EE9E1C1B1E47C3BD0074B1F6 /* AppDelegate.swift */,
-				EE9E1C1D1E47C3BD0074B1F6 /* ViewController.swift */,
 				EE9E1C1F1E47C3BD0074B1F6 /* Main.storyboard */,
+				EE9E1C301E47DEC90074B1F6 /* LoginViewController.swift */,
+				EE9E1C321E47DEDF0074B1F6 /* FeedViewController.swift */,
+				EE9E1C341E47DEEC0074B1F6 /* TweetViewController.swift */,
+				EE9E1C361E47DEF40074B1F6 /* ProfileViewController.swift */,
 				EE9E1C251E47C3BD0074B1F6 /* Assets.xcassets */,
 				EE9E1C271E47C3BD0074B1F6 /* LaunchScreen.storyboard */,
 				EE9E1C2A1E47C3BD0074B1F6 /* Info.plist */,
@@ -140,8 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE9E1C371E47DEF40074B1F6 /* ProfileViewController.swift in Sources */,
+				EE9E1C311E47DEC90074B1F6 /* LoginViewController.swift in Sources */,
 				EE9E1C241E47C3BD0074B1F6 /* TwitterTestTask.xcdatamodeld in Sources */,
-				EE9E1C1E1E47C3BD0074B1F6 /* ViewController.swift in Sources */,
+				EE9E1C351E47DEEC0074B1F6 /* TweetViewController.swift in Sources */,
+				EE9E1C331E47DEDF0074B1F6 /* FeedViewController.swift in Sources */,
 				EE9E1C1C1E47C3BD0074B1F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
