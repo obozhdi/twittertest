@@ -116,6 +116,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="UOW-xh-xKz" id="wIE-9B-hYK"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgM-SU-QvW">
                                 <rect key="frame" x="86" y="288" width="203" height="30"/>
@@ -127,6 +130,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="getTweets:" destination="UOW-xh-xKz" eventType="touchUpInside" id="1Rw-7B-8ve"/>
                                     <segue destination="Bz1-je-Zmg" kind="show" id="5Wf-eR-1ET"/>
                                 </connections>
                             </button>
@@ -143,6 +147,7 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="twitterNameField" destination="u0M-gn-Rwr" id="YyQ-Gw-4sM"/>
                         <segue destination="Bz1-je-Zmg" kind="show" id="6UC-Pi-sPp"/>
                     </connections>
                 </viewController>
