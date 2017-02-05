@@ -318,6 +318,7 @@
 				EE9E1C2F1E47C3BD0074B1F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
