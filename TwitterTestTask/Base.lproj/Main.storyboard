@@ -450,6 +450,14 @@
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="avatarImgView" destination="QjK-HM-Xnj" id="H4N-1O-ckh"/>
+                        <outlet property="nameLabel" destination="BdZ-qh-lXu" id="9Km-fV-vzy"/>
+                        <outlet property="screennameLabel" destination="rKr-61-1u2" id="BRL-fL-IXy"/>
+                        <outlet property="timestampLabel" destination="e2k-as-b0j" id="0Ri-Ls-uop"/>
+                        <outlet property="tweetImageView" destination="zoy-Zo-Ntb" id="kTx-Ss-Kjx"/>
+                        <outlet property="tweetTextLabel" destination="HPS-eJ-rcd" id="NQh-6R-TUI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3UB-XN-gG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
