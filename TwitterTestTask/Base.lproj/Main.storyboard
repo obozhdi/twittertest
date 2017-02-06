@@ -35,9 +35,13 @@
             <objects>
                 <navigationController id="kTc-BB-11i" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="feed" image="feed_btn" selectedImage="feed_btn_hl" id="K7v-5u-aOr"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xOK-NT-l74">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xOK-NT-l74">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="dDG-WC-7ud" kind="relationship" relationship="rootViewController" id="dbw-Mb-ga2"/>
@@ -145,8 +149,12 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="vuE-5l-MUo" firstAttribute="leading" secondItem="7o2-WL-brx" secondAttribute="leading" id="4zD-8h-haB"/>
                                                 <constraint firstItem="vuE-5l-MUo" firstAttribute="leading" secondItem="7o2-WL-brx" secondAttribute="leading" id="EIv-dc-095"/>
                                                 <constraint firstAttribute="trailing" secondItem="vuE-5l-MUo" secondAttribute="trailing" id="Gf9-28-tQ8"/>
+                                                <constraint firstAttribute="bottom" secondItem="vuE-5l-MUo" secondAttribute="bottom" constant="-1" id="XcX-op-Wee"/>
+                                                <constraint firstItem="vuE-5l-MUo" firstAttribute="top" secondItem="7o2-WL-brx" secondAttribute="top" id="aIV-74-FjE"/>
+                                                <constraint firstAttribute="trailing" secondItem="vuE-5l-MUo" secondAttribute="trailing" id="e9C-Ha-VL8"/>
                                                 <constraint firstItem="vuE-5l-MUo" firstAttribute="top" secondItem="7o2-WL-brx" secondAttribute="top" id="hxc-7u-rZ8"/>
                                                 <constraint firstAttribute="bottom" secondItem="vuE-5l-MUo" secondAttribute="bottom" id="zbD-u8-LV1"/>
                                             </constraints>
@@ -236,7 +244,7 @@
                                                     </constraints>
                                                 </view>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tweetImage" translatesAutoresizingMaskIntoConstraints="NO" id="t49-11-X0b">
-                                                    <rect key="frame" x="16" y="150" width="288" height="151.5"/>
+                                                    <rect key="frame" x="16" y="150" width="288" height="151"/>
                                                     <color key="backgroundColor" red="0.99952894449999996" green="0.039240483190000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -281,11 +289,11 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" id="2T8-GI-caw"/>
+                    <navigationItem key="navigationItem" title="Feed" id="2T8-GI-caw"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="667"/>
                     <connections>
-                        <segue destination="4by-FE-MWR" kind="show" id="D6b-Io-QdA"/>
+                        <segue destination="4by-FE-MWR" kind="show" identifier="SingleTweet" id="D6b-Io-QdA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ea-7a-sAj" userLabel="First Responder" sceneMemberID="firstResponder"/>
