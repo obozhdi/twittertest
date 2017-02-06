@@ -18,7 +18,6 @@
 		EE9E1C371E47DEF40074B1F6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C361E47DEF40074B1F6 /* ProfileViewController.swift */; };
 		EE9E1C3C1E47E4990074B1F6 /* TextTweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C3B1E47E4990074B1F6 /* TextTweetCell.swift */; };
 		EE9E1C3E1E47E4AB0074B1F6 /* ImageTweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C3D1E47E4AB0074B1F6 /* ImageTweetCell.swift */; };
-		EE9E1C401E47F2970074B1F6 /* ObTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C3F1E47F2970074B1F6 /* ObTabbarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		EE9E1C361E47DEF40074B1F6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EE9E1C3B1E47E4990074B1F6 /* TextTweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTweetCell.swift; sourceTree = "<group>"; };
 		EE9E1C3D1E47E4AB0074B1F6 /* ImageTweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTweetCell.swift; sourceTree = "<group>"; };
-		EE9E1C3F1E47F2970074B1F6 /* ObTabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObTabbarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				EE9E1C1B1E47C3BD0074B1F6 /* AppDelegate.swift */,
-				EE9E1C3F1E47F2970074B1F6 /* ObTabbarController.swift */,
 				EE9E1C1F1E47C3BD0074B1F6 /* Main.storyboard */,
 				EE9E1C381E47E4540074B1F6 /* Login */,
 				EE9E1C391E47E45B0074B1F6 /* Feed */,
@@ -187,7 +184,6 @@
 				EE9E1C241E47C3BD0074B1F6 /* TwitterTestTask.xcdatamodeld in Sources */,
 				EE9E1C3E1E47E4AB0074B1F6 /* ImageTweetCell.swift in Sources */,
 				EE9E1C351E47DEEC0074B1F6 /* TweetViewController.swift in Sources */,
-				EE9E1C401E47F2970074B1F6 /* ObTabbarController.swift in Sources */,
 				EE9E1C3C1E47E4990074B1F6 /* TextTweetCell.swift in Sources */,
 				EE9E1C331E47DEDF0074B1F6 /* FeedViewController.swift in Sources */,
 				EE9E1C1C1E47C3BD0074B1F6 /* AppDelegate.swift in Sources */,

@@ -369,10 +369,10 @@
             </objects>
             <point key="canvasLocation" x="-3090.4000000000001" y="-165.06746626686657"/>
         </scene>
-        <!--Ob Tabbar Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="YL8-qj-dtl">
             <objects>
-                <tabBarController id="Bz1-je-Zmg" customClass="ObTabbarController" customModule="TwitterTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="Bz1-je-Zmg" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleAspectFill" translucent="NO" backgroundImage="tabbar_bg" id="NIb-vm-PZu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -402,7 +402,7 @@
         <image name="feed_btn_hl" width="21" height="18"/>
         <image name="profile_btn" width="17" height="21"/>
         <image name="profile_btn_hl" width="17" height="21"/>
-        <image name="tabbar_bg" width="320" height="49"/>
+        <image name="tabbar_bg" width="375" height="49"/>
         <image name="tweetImage" width="290" height="153"/>
     </resources>
     <inferredMetricsTieBreakers>
