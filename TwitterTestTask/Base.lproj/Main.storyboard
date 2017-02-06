@@ -35,7 +35,7 @@
             <objects>
                 <navigationController id="kTc-BB-11i" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="feed" image="feed_btn" selectedImage="feed_btn_hl" id="K7v-5u-aOr"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xOK-NT-l74">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xOK-NT-l74">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
@@ -152,6 +152,7 @@
                                                 <constraint firstItem="vuE-5l-MUo" firstAttribute="leading" secondItem="7o2-WL-brx" secondAttribute="leading" id="4zD-8h-haB"/>
                                                 <constraint firstItem="vuE-5l-MUo" firstAttribute="leading" secondItem="7o2-WL-brx" secondAttribute="leading" id="EIv-dc-095"/>
                                                 <constraint firstAttribute="trailing" secondItem="vuE-5l-MUo" secondAttribute="trailing" id="Gf9-28-tQ8"/>
+                                                <constraint firstItem="vuE-5l-MUo" firstAttribute="top" secondItem="7o2-WL-brx" secondAttribute="top" id="HEq-CR-W2s"/>
                                                 <constraint firstAttribute="bottom" secondItem="vuE-5l-MUo" secondAttribute="bottom" constant="-1" id="XcX-op-Wee"/>
                                                 <constraint firstItem="vuE-5l-MUo" firstAttribute="top" secondItem="7o2-WL-brx" secondAttribute="top" id="aIV-74-FjE"/>
                                                 <constraint firstAttribute="trailing" secondItem="vuE-5l-MUo" secondAttribute="trailing" id="e9C-Ha-VL8"/>
