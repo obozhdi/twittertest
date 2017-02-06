@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Tweet Reader</string>
+	<string>TweetReader</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -27,7 +27,7 @@
 			<string>com.obodev.TwitterTestTask</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>tweettestapp</string>
+				<string>swifter</string>
 			</array>
 		</dict>
 	</array>
