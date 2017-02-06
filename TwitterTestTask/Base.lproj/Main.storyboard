@@ -23,6 +23,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gob-ds-HwQ">
+                                <rect key="frame" x="0.0" y="170" width="375" height="448"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="150" id="ZfA-27-73H">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZfA-27-73H" id="vCF-9C-9FC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stacy Martin" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sU-uV-zjR">
+                                                    <rect key="frame" x="16" y="10" width="318" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="fZe-aM-C3J"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="31"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="7sU-uV-zjR" secondAttribute="trailing" constant="41" id="cp4-1G-Kbw"/>
+                                                <constraint firstItem="7sU-uV-zjR" firstAttribute="leading" secondItem="vCF-9C-9FC" secondAttribute="leading" constant="16" id="iYb-72-Uqy"/>
+                                                <constraint firstItem="7sU-uV-zjR" firstAttribute="top" secondItem="vCF-9C-9FC" secondAttribute="top" constant="10" id="pIf-aH-ltH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="eOQ-5h-eI1" id="mS0-MD-yS2"/>
+                                    <outlet property="delegate" destination="eOQ-5h-eI1" id="Pwc-dq-PfC"/>
+                                </connections>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1D-by-bZ0" userLabel="topview">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
                                 <subviews>
@@ -87,11 +122,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gob-ds-HwQ" firstAttribute="leading" secondItem="fSs-lh-uhB" secondAttribute="leading" id="0lR-De-SHX"/>
                             <constraint firstItem="DBK-mT-knc" firstAttribute="leading" secondItem="fSs-lh-uhB" secondAttribute="leading" constant="16" id="3b2-fl-LCR"/>
+                            <constraint firstItem="gob-ds-HwQ" firstAttribute="top" secondItem="l1D-by-bZ0" secondAttribute="bottom" id="F2a-5w-wBr"/>
+                            <constraint firstItem="6VP-Am-bmB" firstAttribute="top" secondItem="gob-ds-HwQ" secondAttribute="bottom" id="Gty-uw-ecE"/>
                             <constraint firstItem="l1D-by-bZ0" firstAttribute="top" secondItem="fSs-lh-uhB" secondAttribute="top" id="PBA-zs-fzb"/>
                             <constraint firstAttribute="trailing" secondItem="l1D-by-bZ0" secondAttribute="trailing" id="Ppd-xt-CA0"/>
                             <constraint firstItem="KfG-ms-4LV" firstAttribute="top" secondItem="fSs-lh-uhB" secondAttribute="top" id="SnJ-2R-ush"/>
                             <constraint firstItem="Fmf-Cj-3qJ" firstAttribute="leading" secondItem="fSs-lh-uhB" secondAttribute="leadingMargin" constant="16" id="WBe-F2-16b"/>
+                            <constraint firstAttribute="trailing" secondItem="gob-ds-HwQ" secondAttribute="trailing" id="Z9Q-1h-Qff"/>
                             <constraint firstItem="l1D-by-bZ0" firstAttribute="leading" secondItem="fSs-lh-uhB" secondAttribute="leading" id="ZCH-L1-Chm"/>
                             <constraint firstItem="DBK-mT-knc" firstAttribute="top" secondItem="fSs-lh-uhB" secondAttribute="top" constant="118" id="eAX-iN-9za"/>
                             <constraint firstItem="KfG-ms-4LV" firstAttribute="leading" secondItem="fSs-lh-uhB" secondAttribute="leading" id="f7u-Wa-wCW"/>
