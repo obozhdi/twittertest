@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="profile" image="profile_btn" id="eR3-Os-AN1"/>
+                    <tabBarItem key="tabBarItem" title="profile" image="profile_btn" selectedImage="profile_btn_hl" id="eR3-Os-AN1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uy0-mc-dTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -34,7 +34,7 @@
         <scene sceneID="THO-WU-tBG">
             <objects>
                 <navigationController id="kTc-BB-11i" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="feed" image="feed_btn" id="K7v-5u-aOr"/>
+                    <tabBarItem key="tabBarItem" title="feed" image="feed_btn" selectedImage="feed_btn_hl" id="K7v-5u-aOr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xOK-NT-l74">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -369,14 +369,22 @@
             </objects>
             <point key="canvasLocation" x="-3090.4000000000001" y="-165.06746626686657"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Ob Tabbar Controller-->
         <scene sceneID="YL8-qj-dtl">
             <objects>
-                <tabBarController id="Bz1-je-Zmg" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="NIb-vm-PZu">
+                <tabBarController id="Bz1-je-Zmg" customClass="ObTabbarController" customModule="TwitterTestTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" backgroundImage="tabbar_bg" id="NIb-vm-PZu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="kTc-BB-11i" kind="relationship" relationship="viewControllers" id="aeX-6k-4gG"/>
@@ -391,7 +399,10 @@
     <resources>
         <image name="dummyAvatar" width="45" height="45"/>
         <image name="feed_btn" width="21" height="18"/>
+        <image name="feed_btn_hl" width="21" height="18"/>
         <image name="profile_btn" width="17" height="21"/>
+        <image name="profile_btn_hl" width="17" height="21"/>
+        <image name="tabbar_bg" width="320" height="49"/>
         <image name="tweetImage" width="290" height="153"/>
     </resources>
     <inferredMetricsTieBreakers>
