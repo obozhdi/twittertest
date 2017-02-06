@@ -12,7 +12,10 @@ class TweetViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+        
+        self.navigationController?.navigationBar.tintColor = .white
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         // Do any additional setup after loading the view.
     }
 

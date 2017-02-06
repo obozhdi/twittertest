@@ -19,6 +19,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let image = UIImage(named: "navbar_bg")
         self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

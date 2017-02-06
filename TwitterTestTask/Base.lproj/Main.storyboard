@@ -35,11 +35,11 @@
             <objects>
                 <navigationController id="kTc-BB-11i" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="feed" image="feed_btn" selectedImage="feed_btn_hl" id="K7v-5u-aOr"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xOK-NT-l74">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xOK-NT-l74">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
@@ -73,7 +73,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4eX-js-M9Y" id="7o2-WL-brx">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuE-5l-MUo" userLabel="container">
@@ -92,7 +92,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROMAN GAVRÀS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaw-FQ-pjy">
-                                                            <rect key="frame" x="75" y="28" width="100.5" height="14"/>
+                                                            <rect key="frame" x="75" y="28" width="101" height="14"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="14" id="png-Fq-Vau"/>
                                                             </constraints>
@@ -173,7 +173,7 @@
                                         <rect key="frame" x="0.0" y="178" width="320" height="310"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ILl-dl-gGF" id="cpC-GS-M5N">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="309"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CyB-jG-7ch" userLabel="container">
@@ -314,6 +314,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="sBI-II-6F6">
+                        <barButtonItem key="backBarButtonItem" title=" " id="MUG-IK-PZX"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3UB-XN-gG7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
