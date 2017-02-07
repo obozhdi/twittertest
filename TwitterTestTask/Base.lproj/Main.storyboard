@@ -459,13 +459,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stacy Martin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BdZ-qh-lXu">
-                                                        <rect key="frame" x="136" y="44.5" width="168" height="42.5"/>
+                                                        <rect key="frame" x="136" y="44" width="168" height="43"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="31"/>
                                                         <color key="textColor" red="0.090227402746677399" green="0.086263321340084076" blue="0.086223475635051727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 hours ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2k-as-b0j">
-                                                        <rect key="frame" x="136" y="31.5" width="168" height="11"/>
+                                                        <rect key="frame" x="136" y="31" width="168" height="11"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="11" id="jHs-sT-oQf"/>
                                                         </constraints>
@@ -590,22 +590,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="@username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u0M-gn-Rwr">
-                                <rect key="frame" x="64" y="88" width="247" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="V8e-X0-nLB"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="UOW-xh-xKz" id="wIE-9B-hYK"/>
-                                </connections>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgM-SU-QvW">
-                                <rect key="frame" x="86" y="288" width="203" height="30"/>
+                                <rect key="frame" x="86" y="318.5" width="203" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="0xJ-u6-ll1"/>
+                                    <constraint firstAttribute="height" constant="30" id="Oja-Qd-gPb"/>
+                                    <constraint firstAttribute="width" constant="203" id="v6f-c7-UuV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                 <state key="normal" title="Get tweets">
@@ -613,25 +602,16 @@
                                 </state>
                                 <connections>
                                     <action selector="getTweets:" destination="UOW-xh-xKz" eventType="touchUpInside" id="1Rw-7B-8ve"/>
-                                    <segue destination="Bz1-je-Zmg" kind="show" id="5Wf-eR-1ET"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.48216652870178223" green="0.59584593772888184" blue="0.96142393350601196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bgM-SU-QvW" firstAttribute="top" secondItem="u0M-gn-Rwr" secondAttribute="bottom" constant="170" id="7VU-5Z-5cO"/>
-                            <constraint firstItem="u0M-gn-Rwr" firstAttribute="top" secondItem="0RS-nv-z4g" secondAttribute="bottom" constant="68" id="BL6-4w-KZU"/>
-                            <constraint firstItem="bgM-SU-QvW" firstAttribute="leading" secondItem="afC-b6-hth" secondAttribute="leadingMargin" constant="70" id="Pax-6P-joV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="u0M-gn-Rwr" secondAttribute="trailing" constant="48" id="ebI-oB-5aR"/>
-                            <constraint firstItem="u0M-gn-Rwr" firstAttribute="leading" secondItem="afC-b6-hth" secondAttribute="leadingMargin" constant="48" id="kAe-JJ-i9S"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bgM-SU-QvW" secondAttribute="trailing" constant="70" id="srV-rx-3iG"/>
+                            <constraint firstItem="bgM-SU-QvW" firstAttribute="centerX" secondItem="afC-b6-hth" secondAttribute="centerX" id="Xlw-xV-OUo"/>
+                            <constraint firstItem="bgM-SU-QvW" firstAttribute="centerY" secondItem="afC-b6-hth" secondAttribute="centerY" id="mPg-hh-eYK"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <connections>
-                        <outlet property="twitterNameField" destination="u0M-gn-Rwr" id="YyQ-Gw-4sM"/>
-                        <segue destination="Bz1-je-Zmg" kind="show" id="6UC-Pi-sPp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXC-Yy-sdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -674,7 +654,4 @@
         <image name="tabbar_bg" width="375" height="49"/>
         <image name="tweetImage" width="290" height="153"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="6UC-Pi-sPp"/>
-    </inferredMetricsTieBreakers>
 </document>
