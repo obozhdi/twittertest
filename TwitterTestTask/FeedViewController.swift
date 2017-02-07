@@ -63,9 +63,18 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SingleTweet" {
+            let nextVC = segue.destination as! TweetViewController
+            nextVC.tweet = sender as? Tweet
+        }
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        self.performSegue(withIdentifier: "SingleTweet", sender: nil)
+        
+        let passedTweet = Singleton.sharedInstance.tableArray[indexPath.row]
+        performSegue(withIdentifier: "SingleTweet", sender: passedTweet)
     }
     
 }
