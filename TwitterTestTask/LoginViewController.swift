@@ -7,14 +7,33 @@
 //
 
 import UIKit
+import SwifteriOS
+import Accounts
+
+class Tweet: NSObject {
+    var name: String!
+    var text: String!
+}
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var twitterNameField: UITextField!
-
+    
+    dynamic var tweets: [Tweet] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let swifter = Swifter(consumerKey: "nxJuCvaI8TgusEMBEWkMza3i1",
+                              consumerSecret: "nLStckpxQjeAqb2AB7EKF1Hye7RM7M5AGUgdbiBUgvkbAR0dqC")
+        
+        swifter.authorize(with: URL(string: "swifter://success")!, presentFrom: self, success: { _ in
+            
+            swifter.getHomeTimeline(count: 1, success: { statuses in
+                print("FUCKING DATA!!!!! \(statuses.array)")
+            }, failure: nil)
+        }, failure: nil)
+        print(2)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -28,11 +47,5 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func getTweets(_ sender: Any) {
-        
     }
-    
-//    -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-//    {
-//    [self.view endEditing:YES];
-//    }
 }
