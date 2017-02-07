@@ -23,23 +23,24 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 42
+        return Singleton.sharedInstance.tableArray.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row % 2 != 0 {
-            return 310
-        }
+//        if indexPath.row % 2 != 0 {
+//            return 310
+//        }
         return 150
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row % 2 != 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: imageTweetReuseIdentifier) as! ImageTweetCell
-            
-            return cell
-        }
+//        if indexPath.row % 2 != 0 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: imageTweetReuseIdentifier) as! ImageTweetCell
+//            
+//            return cell
+//        }
         let cell = tableView.dequeueReusableCell(withIdentifier: textTweetReuseIdentifier) as! TextTweetCell
+        cell.nameLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].nameText
         
         return cell
     }

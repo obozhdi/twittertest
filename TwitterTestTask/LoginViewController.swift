@@ -16,7 +16,6 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
     
     var swifter: Swifter
     var tweets : [JSON] = []
-    var singletonClass = Sigleton()
     
     required init?(coder aDecoder: NSCoder) {
         self.swifter = Swifter(consumerKey: "RErEmzj7ijDkJr60ayE2gjSHT", consumerSecret: "SbS0CHk11oJdALARa7NDik0nty4pXvAxdt7aj0R5y1gNzWaNEx")
@@ -28,17 +27,29 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
         
     }
     
-    func fetchTwitterHomeStream() {
+    func fetchTwitterHomeStream(completion: (() -> Void)?) {
         let failureHandler: (Error) -> Void = { error in
             self.alert(title: "Error", message: error.localizedDescription)
         }
         
-        self.swifter.getHomeTimeline(count: 5, success: { json in
+        self.swifter.getHomeTimeline(count: 50, success: { json in
             
-            guard let tweets = json.array else { return }
-            self.singletonClass.tweets = tweets
+            guard let tweets = json.array else {
+                completion?()
+                
+                return
+            }
             
-            self.singletonClass.printArray()
+            var tweetsArray: [Tweet] = []
+            
+            for i in tweets {
+                let tweetObject = Tweet.init(json: i)
+                tweetsArray.append(tweetObject)
+            }
+            
+            Singleton.sharedInstance.tableArray = tweetsArray
+            Singleton.sharedInstance.printArray()
+            completion?()
         }, failure: failureHandler)
         
     }
@@ -46,13 +57,14 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
     @IBAction func getTweets(_ sender: Any) {
         let failureHandler: (Error) -> Void = { error in
             self.alert(title: "Error", message: error.localizedDescription)
-            
         }
         
         let url = URL(string: "swifter://success")!
         
         swifter.authorize(with: url, presentFrom: self, success: { _ in
-            self.fetchTwitterHomeStream()
+            self.fetchTwitterHomeStream(completion: { 
+                self.performSegue(withIdentifier: "ShowTabbarController", sender: nil)
+            })
         }, failure: failureHandler)
     }
     
