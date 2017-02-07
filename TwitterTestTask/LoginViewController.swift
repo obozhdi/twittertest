@@ -10,11 +10,6 @@ import UIKit
 import SwifteriOS
 import Accounts
 
-class Tweet: NSObject {
-    var name: String!
-    var text: String!
-}
-
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var twitterNameField: UITextField!

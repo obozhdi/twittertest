@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EE3D6BCE1E492B4400543CA4 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3D6BCD1E492B4400543CA4 /* SwifteriOS.framework */; };
 		EE3D6BD01E492B5000543CA4 /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE3D6BCD1E492B4400543CA4 /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE3D6BD31E49EDDC00543CA4 /* TwitterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D6BD21E49EDDC00543CA4 /* TwitterData.swift */; };
+		EE3D6BD51E49EE9300543CA4 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D6BD41E49EE9300543CA4 /* Tweet.swift */; };
 		EE9E1C1C1E47C3BD0074B1F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C1B1E47C3BD0074B1F6 /* AppDelegate.swift */; };
 		EE9E1C211E47C3BD0074B1F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9E1C1F1E47C3BD0074B1F6 /* Main.storyboard */; };
 		EE9E1C241E47C3BD0074B1F6 /* TwitterTestTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C221E47C3BD0074B1F6 /* TwitterTestTask.xcdatamodeld */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		EE3D6BCD1E492B4400543CA4 /* SwifteriOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwifteriOS.framework; sourceTree = "<group>"; };
+		EE3D6BD21E49EDDC00543CA4 /* TwitterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterData.swift; sourceTree = "<group>"; };
+		EE3D6BD41E49EE9300543CA4 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		EE9E1C181E47C3BC0074B1F6 /* TwitterTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9E1C1B1E47C3BD0074B1F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE9E1C201E47C3BD0074B1F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				EE9E1C2A1E47C3BD0074B1F6 /* Info.plist */,
 				EE9E1C221E47C3BD0074B1F6 /* TwitterTestTask.xcdatamodeld */,
 				EE3D6BCD1E492B4400543CA4 /* SwifteriOS.framework */,
+				EE3D6BD21E49EDDC00543CA4 /* TwitterData.swift */,
+				EE3D6BD41E49EE9300543CA4 /* Tweet.swift */,
 			);
 			path = TwitterTestTask;
 			sourceTree = "<group>";
@@ -200,8 +206,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE9E1C371E47DEF40074B1F6 /* ProfileViewController.swift in Sources */,
+				EE3D6BD51E49EE9300543CA4 /* Tweet.swift in Sources */,
 				EE9E1C311E47DEC90074B1F6 /* LoginViewController.swift in Sources */,
 				EE9E1C241E47C3BD0074B1F6 /* TwitterTestTask.xcdatamodeld in Sources */,
+				EE3D6BD31E49EDDC00543CA4 /* TwitterData.swift in Sources */,
 				EE9E1C3E1E47E4AB0074B1F6 /* ImageTweetCell.swift in Sources */,
 				EE9E1C351E47DEEC0074B1F6 /* TweetViewController.swift in Sources */,
 				EE9E1C3C1E47E4990074B1F6 /* TextTweetCell.swift in Sources */,
