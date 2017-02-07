@@ -8,6 +8,24 @@
 
 import UIKit
 
+extension UIImageView {
+    public func imageFromServerURL(urlString: String) {
+        
+        URLSession.shared.dataTask(with: NSURL(string: urlString)! as URL, completionHandler: { (data, response, error) -> Void in
+            
+            if error != nil {
+                print(error!)
+                return
+            }
+            DispatchQueue.main.async(execute: { () -> Void in
+                let image = UIImage(data: data!)
+                self.image = image
+            })
+            
+        }).resume()
+    }
+}
+
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let textTweetHeight:  CGFloat = 150.0
     let imageTweetHeight: CGFloat = 310.0
@@ -27,20 +45,20 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        if indexPath.row % 2 != 0 {
-//            return 310
-//        }
         return 150
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if indexPath.row % 2 != 0 {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: imageTweetReuseIdentifier) as! ImageTweetCell
-//            
-//            return cell
-//        }
         let cell = tableView.dequeueReusableCell(withIdentifier: textTweetReuseIdentifier) as! TextTweetCell
+        
+        cell.avatarImgView.imageFromServerURL(urlString: Singleton.sharedInstance.tableArray[indexPath.row].avatarImgUrl!)
+        
         cell.nameLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].nameText
+        cell.screennameLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].screennameText
+        cell.tweetTextLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].tweetTextText
+        cell.timestampLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].timestampTextl!
+        
+        //Wed Dec 29 11:17:58 +0000 2010
         
         return cell
     }

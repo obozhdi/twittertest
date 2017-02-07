@@ -194,7 +194,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuE-5l-MUo" userLabel="container">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="HXy-w4-xR3" userLabel="avatar">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="HXy-w4-xR3" userLabel="avatar">
                                                             <rect key="frame" x="15" y="20" width="50" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="92g-oc-G72"/>
@@ -202,7 +202,7 @@
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="50"/>
+                                                                    <integer key="value" value="25"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
@@ -226,10 +226,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4H AGO" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPs-tb-oNc">
-                                                            <rect key="frame" x="212" y="28" width="93" height="13"/>
+                                                            <rect key="frame" x="175" y="28" width="130" height="13"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="13" id="H7e-pq-r4K"/>
-                                                                <constraint firstAttribute="width" constant="93" id="vbd-Nw-3UH"/>
+                                                                <constraint firstAttribute="width" constant="130" id="vbd-Nw-3UH"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                             <nil key="textColor"/>

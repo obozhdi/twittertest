@@ -32,8 +32,7 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
             self.alert(title: "Error", message: error.localizedDescription)
         }
         
-        self.swifter.getHomeTimeline(count: 50, success: { json in
-            
+        self.swifter.getHomeTimeline(count: 10, success: { json in
             guard let tweets = json.array else {
                 completion?()
                 
@@ -48,10 +47,8 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
             }
             
             Singleton.sharedInstance.tableArray = tweetsArray
-            Singleton.sharedInstance.printArray()
             completion?()
         }, failure: failureHandler)
-        
     }
     
     @IBAction func getTweets(_ sender: Any) {

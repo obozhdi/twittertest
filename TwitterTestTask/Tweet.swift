@@ -22,7 +22,9 @@ class Tweet: NSObject {
         
         self.avatarImgUrl = json["user"]["profile_image_url_https"].string
         self.nameText = json["user"]["name"].string
-        
-//        print("USER NAME -       \(tweets[0]["user"]["name"])")
+        self.screennameText = "@" + json["user"]["screen_name"].string!
+        self.timestampTextl = json["user"]["created_at"].string
+        self.tweetTextText = json["text"].string
+        self.tweetImageUrl = "tweetImageUrl"
     }
 }
