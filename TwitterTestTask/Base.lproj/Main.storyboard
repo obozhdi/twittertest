@@ -32,7 +32,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZfA-27-73H" id="vCF-9C-9FC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stacy Martin" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sU-uV-zjR">
@@ -187,14 +187,14 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="textTweetCell" rowHeight="150" id="4eX-js-M9Y" customClass="TextTweetCell" customModule="TwitterTestTask" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="4eX-js-M9Y" id="7o2-WL-brx">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="149"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4eX-js-M9Y" id="7o2-WL-brx">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuE-5l-MUo" userLabel="container">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuE-5l-MUo" userLabel="container">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="dummyAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="HXy-w4-xR3" userLabel="avatar">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="HXy-w4-xR3" userLabel="avatar">
                                                             <rect key="frame" x="15" y="20" width="50" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="92g-oc-G72"/>
@@ -202,11 +202,11 @@
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="50"/>
+                                                                    <integer key="value" value="25"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ROMAN GAVRÀS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaw-FQ-pjy">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROMAN GAVRÀS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaw-FQ-pjy">
                                                             <rect key="frame" x="75" y="28" width="101" height="14"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="14" id="png-Fq-Vau"/>
@@ -215,7 +215,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="@roman.gavras" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKC-93-YuM">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@roman.gavras" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKC-93-YuM">
                                                             <rect key="frame" x="75" y="48" width="119" height="13"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="119" id="FfU-tA-TYg"/>
@@ -225,17 +225,17 @@
                                                             <color key="textColor" red="0.46662342548370361" green="0.46669423580169678" blue="0.46660798788070679" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="4H AGO" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPs-tb-oNc">
-                                                            <rect key="frame" x="212" y="28" width="93" height="13"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4H AGO" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPs-tb-oNc">
+                                                            <rect key="frame" x="175" y="28" width="130" height="13"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="13" id="H7e-pq-r4K"/>
-                                                                <constraint firstAttribute="width" constant="93" id="vbd-Nw-3UH"/>
+                                                                <constraint firstAttribute="width" constant="130" id="vbd-Nw-3UH"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBv-ix-9rj">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBv-ix-9rj">
                                                             <rect key="frame" x="15" y="73" width="290" height="70"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="WBv-ix-9rj" secondAttribute="height" multiplier="49:11" constant="-21.818181818181813" id="vr7-ur-Mqd"/>
@@ -288,7 +288,7 @@
                                         <rect key="frame" x="0.0" y="178" width="320" height="310"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ILl-dl-gGF" id="cpC-GS-M5N">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="309"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CyB-jG-7ch" userLabel="container">
@@ -459,13 +459,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stacy Martin" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BdZ-qh-lXu">
-                                                        <rect key="frame" x="136" y="44.5" width="168" height="42.5"/>
+                                                        <rect key="frame" x="136" y="44" width="168" height="43"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-UltraLight" family="Avenir Next" pointSize="31"/>
                                                         <color key="textColor" red="0.090227402746677399" green="0.086263321340084076" blue="0.086223475635051727" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 hours ago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2k-as-b0j">
-                                                        <rect key="frame" x="136" y="31.5" width="168" height="11"/>
+                                                        <rect key="frame" x="136" y="31" width="168" height="11"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="11" id="jHs-sT-oQf"/>
                                                         </constraints>
@@ -590,22 +590,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="@username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u0M-gn-Rwr">
-                                <rect key="frame" x="64" y="88" width="247" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="V8e-X0-nLB"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="UOW-xh-xKz" id="wIE-9B-hYK"/>
-                                </connections>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgM-SU-QvW">
-                                <rect key="frame" x="86" y="288" width="203" height="30"/>
+                                <rect key="frame" x="86" y="318.5" width="203" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="0xJ-u6-ll1"/>
+                                    <constraint firstAttribute="height" constant="30" id="Oja-Qd-gPb"/>
+                                    <constraint firstAttribute="width" constant="203" id="v6f-c7-UuV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
                                 <state key="normal" title="Get tweets">
@@ -613,24 +602,18 @@
                                 </state>
                                 <connections>
                                     <action selector="getTweets:" destination="UOW-xh-xKz" eventType="touchUpInside" id="1Rw-7B-8ve"/>
-                                    <segue destination="Bz1-je-Zmg" kind="show" id="5Wf-eR-1ET"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.48216652870178223" green="0.59584593772888184" blue="0.96142393350601196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bgM-SU-QvW" firstAttribute="top" secondItem="u0M-gn-Rwr" secondAttribute="bottom" constant="170" id="7VU-5Z-5cO"/>
-                            <constraint firstItem="u0M-gn-Rwr" firstAttribute="top" secondItem="0RS-nv-z4g" secondAttribute="bottom" constant="68" id="BL6-4w-KZU"/>
-                            <constraint firstItem="bgM-SU-QvW" firstAttribute="leading" secondItem="afC-b6-hth" secondAttribute="leadingMargin" constant="70" id="Pax-6P-joV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="u0M-gn-Rwr" secondAttribute="trailing" constant="48" id="ebI-oB-5aR"/>
-                            <constraint firstItem="u0M-gn-Rwr" firstAttribute="leading" secondItem="afC-b6-hth" secondAttribute="leadingMargin" constant="48" id="kAe-JJ-i9S"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bgM-SU-QvW" secondAttribute="trailing" constant="70" id="srV-rx-3iG"/>
+                            <constraint firstItem="bgM-SU-QvW" firstAttribute="centerX" secondItem="afC-b6-hth" secondAttribute="centerX" id="Xlw-xV-OUo"/>
+                            <constraint firstItem="bgM-SU-QvW" firstAttribute="centerY" secondItem="afC-b6-hth" secondAttribute="centerY" id="mPg-hh-eYK"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="twitterNameField" destination="u0M-gn-Rwr" id="YyQ-Gw-4sM"/>
-                        <segue destination="Bz1-je-Zmg" kind="show" id="6UC-Pi-sPp"/>
+                        <segue destination="Bz1-je-Zmg" kind="show" identifier="ShowTabbarController" id="hMJ-hP-gjv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXC-Yy-sdi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -674,7 +657,4 @@
         <image name="tabbar_bg" width="375" height="49"/>
         <image name="tweetImage" width="290" height="153"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="6UC-Pi-sPp"/>
-    </inferredMetricsTieBreakers>
 </document>

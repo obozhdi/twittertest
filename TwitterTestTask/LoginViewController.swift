@@ -7,45 +7,69 @@
 //
 
 import UIKit
-import SwifteriOS
 import Accounts
+import Social
+import SwifteriOS
+import SafariServices
 
-class Tweet: NSObject {
-    var name: String!
-    var text: String!
-}
-
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
     
-    @IBOutlet weak var twitterNameField: UITextField!
+    var swifter: Swifter
+    var tweets : [JSON] = []
     
-    dynamic var tweets: [Tweet] = []
+    required init?(coder aDecoder: NSCoder) {
+        self.swifter = Swifter(consumerKey: "RErEmzj7ijDkJr60ayE2gjSHT", consumerSecret: "SbS0CHk11oJdALARa7NDik0nty4pXvAxdt7aj0R5y1gNzWaNEx")
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let swifter = Swifter(consumerKey: "nxJuCvaI8TgusEMBEWkMza3i1",
-                              consumerSecret: "nLStckpxQjeAqb2AB7EKF1Hye7RM7M5AGUgdbiBUgvkbAR0dqC")
+    }
+    
+    func fetchTwitterHomeStream(completion: (() -> Void)?) {
+        let failureHandler: (Error) -> Void = { error in
+            self.alert(title: "Error", message: error.localizedDescription)
+        }
         
-        swifter.authorize(with: URL(string: "swifter://success")!, presentFrom: self, success: { _ in
+        self.swifter.getHomeTimeline(count: 50, success: { json in
+            print(json)
             
-            swifter.getHomeTimeline(count: 1, success: { statuses in
-                print("FUCKING DATA!!!!! \(statuses.array)")
-            }, failure: nil)
-        }, failure: nil)
-        print(2)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.twitterNameField.resignFirstResponder()
-        
-        return true
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+            guard let tweets = json.array else {
+                completion?()
+                
+                return
+            }
+            
+            var tweetsArray: [Tweet] = []
+            
+            for i in tweets {
+                let tweetObject = Tweet.init(json: i)
+                tweetsArray.append(tweetObject)
+            }
+            
+            Singleton.sharedInstance.tableArray = tweetsArray
+            completion?()
+        }, failure: failureHandler)
     }
     
     @IBAction func getTweets(_ sender: Any) {
+        let failureHandler: (Error) -> Void = { error in
+            self.alert(title: "Error", message: error.localizedDescription)
+        }
+        
+        let url = URL(string: "swifter://success")!
+        
+        swifter.authorize(with: url, presentFrom: self, success: { _ in
+            self.fetchTwitterHomeStream(completion: { 
+                self.performSegue(withIdentifier: "ShowTabbarController", sender: nil)
+            })
+        }, failure: failureHandler)
+    }
+    
+    func alert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
