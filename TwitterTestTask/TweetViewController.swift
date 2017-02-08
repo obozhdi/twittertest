@@ -15,7 +15,6 @@ class TweetViewController: UIViewController {
     @IBOutlet weak var screennameLabel: UILabel!
     @IBOutlet weak var timestampLabel: UILabel!
     @IBOutlet weak var tweetTextLabel: UILabel!
-    @IBOutlet weak var tweetImageView: UIImageView!
     
     var tweet: Tweet? = nil
 

@@ -33,8 +33,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     let imageTweetReuseIdentifier: String = "imageTweetCell"
     @IBOutlet weak var tableView: UITableView!
     var refreshControl = UIRefreshControl()
-    
     var isLoaded: Bool = false
+    
+    @IBOutlet weak var hideAvatarsBtn: UIButton!
+    var avatarWidth: CGFloat = 50
+    let defaults = UserDefaults.standard
+    var avatarsOn: Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +47,45 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         
+        UserDefaults.standard.set(true, forKey: "onOff")
+        avatarsOn = UserDefaults.standard.bool(forKey: "onOff") as Bool!
+        
         self.tableView.addSubview(refreshControl)
         
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
     }
+    
+    @IBAction func showHideAvatars(_ sender: Any) {
+//        if !UserDefaults.standard.bool(forKey: "onOff") {
+//            UserDefaults.standard.set(false, forKey: "onOff")
+//            print("avatars off")
+//            avatarsOn = !avatarsOn
+//            self.hideAvatarsBtn.setTitle("Hide", for: .normal)
+//            self.avatarWidth = 0
+//            self.tableView.reloadData()
+//        } else {
+//            print("avatars on")
+//            avatarsOn = !avatarsOn
+//            self.hideAvatarsBtn.setTitle("Show", for: .normal)
+//            self.avatarWidth = 50
+//            UserDefaults.standard.set(false, forKey: "onOff")
+//            self.tableView.reloadData()
+//        }
+        
+        if avatarsOn!{
+            print("avatars off")
+            avatarsOn = !avatarsOn
+            self.hideAvatarsBtn.setTitle("Show", for: .normal)
+            self.avatarWidth = 0
+        } else {
+            print("avatars on")
+            avatarsOn = !avatarsOn!
+            self.hideAvatarsBtn.setTitle("Hide", for: .normal)
+            self.avatarWidth = 50
+        }
+        self.tableView.reloadData()
+    }
+    
     
     func refreshData() {
         self.getData(givenSinceID: nil, givenMaxID: nil)
@@ -92,11 +131,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.screennameLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].screennameText
         cell.tweetTextLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].tweetTextText
         cell.timestampLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].timestampTextl
+        cell.avatarWidthConstraint.constant = self.avatarWidth
         
-        if (indexPath.row == Singleton.sharedInstance.tableArray.count - 1) && !self.isLoaded {
-            self.isLoaded = true
-            self.getData(givenSinceID: nil, givenMaxID: Singleton.sharedInstance.sinceID)
-        }
+//        if (indexPath.row == Singleton.sharedInstance.tableArray.count - 1) && !self.isLoaded {
+//            self.isLoaded = true
+//            self.getData(givenSinceID: nil, givenMaxID: Singleton.sharedInstance.sinceID)
+//        }
         
         return cell
     }
