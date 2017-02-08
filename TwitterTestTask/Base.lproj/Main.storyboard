@@ -161,7 +161,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Feed" id="2T8-GI-caw">
-                        <barButtonItem key="rightBarButtonItem" title="Hide" style="plain" id="NeX-i4-Jz3">
+                        <barButtonItem key="rightBarButtonItem" title="Hide" id="NeX-i4-Jz3">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ON0-kY-G6X">
                                 <rect key="frame" x="233" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -375,7 +375,7 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <segue destination="kTc-BB-11i" kind="show" identifier="ShowTabbarController" id="iN2-Qs-C44"/>
+                        <segue destination="kTc-BB-11i" kind="show" identifier="ShowFeed" id="iN2-Qs-C44"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXC-Yy-sdi" userLabel="First Responder" sceneMemberID="firstResponder"/>

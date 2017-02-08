@@ -31,9 +31,7 @@ final class TwitterManager: NSObject {
             print(error)
         }
         
-        self.swifter.getHomeTimeline(count: 10, sinceID: givenSinceID, maxID: givenMaxID, success: { json in
-//            print(json)
-            
+        self.swifter.getHomeTimeline(count: 50, sinceID: givenSinceID, maxID: givenMaxID, success: { json in
             guard let tweets = json.array else {
                 completion?([])
                 
@@ -46,9 +44,7 @@ final class TwitterManager: NSObject {
                 let tweetObject = Tweet.init(json: i)
                 tweetsArray.append(tweetObject)
             }
-            
             completion?(tweetsArray)
         }, failure: failureHandler)
     }
-
 }

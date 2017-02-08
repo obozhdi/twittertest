@@ -23,13 +23,12 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
         
         TwitterManager.sharedInstance.auth(fromController: self, completion: {
             TwitterManager.sharedInstance.fetchTwitterHomeStream(givenSinceID: nil, givenMaxID: nil, completion: { (tweets) in
-                
                 if tweets.count > 0 {
-                    Singleton.sharedInstance.sinceID = tweets.last?.tweetID
+                    TweetStorage.sharedInstance.sinceID = tweets.last?.tweetID
                 }
                 
-                Singleton.sharedInstance.tableArray = tweets
-                self.performSegue(withIdentifier: "ShowTabbarController", sender: nil)
+                TweetStorage.sharedInstance.tableArray = tweets
+                self.performSegue(withIdentifier: "ShowFeed", sender: nil)
             })
         }, failureHandler: failureHandler)
     }

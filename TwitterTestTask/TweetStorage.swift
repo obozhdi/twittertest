@@ -9,12 +9,12 @@
 import UIKit
 import SwifteriOS
 
-final class Singleton {
+final class TweetStorage {
     var tableArray: [Tweet] = []
     var sinceID: String?
     var maxID: String?
     
-    init() { }
+    init() {}
     
-    static let sharedInstance: Singleton = Singleton()
+    static let sharedInstance: TweetStorage = TweetStorage()
 }
