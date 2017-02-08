@@ -23,6 +23,7 @@
 		EE9E1C371E47DEF40074B1F6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C361E47DEF40074B1F6 /* ProfileViewController.swift */; };
 		EE9E1C3C1E47E4990074B1F6 /* TextTweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C3B1E47E4990074B1F6 /* TextTweetCell.swift */; };
 		EE9E1C3E1E47E4AB0074B1F6 /* ImageTweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9E1C3D1E47E4AB0074B1F6 /* ImageTweetCell.swift */; };
+		EEB3B03E1E4B40A90066525A /* TwitterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB3B03D1E4B40A90066525A /* TwitterManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +58,7 @@
 		EE9E1C361E47DEF40074B1F6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EE9E1C3B1E47E4990074B1F6 /* TextTweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTweetCell.swift; sourceTree = "<group>"; };
 		EE9E1C3D1E47E4AB0074B1F6 /* ImageTweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTweetCell.swift; sourceTree = "<group>"; };
+		EEB3B03D1E4B40A90066525A /* TwitterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				EE9E1C301E47DEC90074B1F6 /* LoginViewController.swift */,
 				EE3D6BD61E49F6DE00543CA4 /* Singleton.swift */,
 				EE3D6BD81E4A119200543CA4 /* Tweet.swift */,
+				EEB3B03D1E4B40A90066525A /* TwitterManager.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE9E1C371E47DEF40074B1F6 /* ProfileViewController.swift in Sources */,
+				EEB3B03E1E4B40A90066525A /* TwitterManager.swift in Sources */,
 				EE3D6BD91E4A119200543CA4 /* Tweet.swift in Sources */,
 				EE9E1C311E47DEC90074B1F6 /* LoginViewController.swift in Sources */,
 				EE9E1C241E47C3BD0074B1F6 /* TwitterTestTask.xcdatamodeld in Sources */,
