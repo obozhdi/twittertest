@@ -16,27 +16,22 @@ final class TwitterManager: NSObject {
     
     static let sharedInstance: TwitterManager = TwitterManager()
     
-    var swifter: Swifter?
-    
-    override init() {
-        super.init()
-        self.swifter = Swifter(consumerKey: "RErEmzj7ijDkJr60ayE2gjSHT", consumerSecret: "SbS0CHk11oJdALARa7NDik0nty4pXvAxdt7aj0R5y1gNzWaNEx")
-    }
+    var swifter = Swifter(consumerKey: "nxJuCvaI8TgusEMBEWkMza3i1", consumerSecret: "nLStckpxQjeAqb2AB7EKF1Hye7RM7M5AGUgdbiBUgvkbAR0dqC")
     
     func auth(fromController: UIViewController, completion: @escaping (() -> Void), failureHandler: @escaping ((Error) -> Void)) {
-        let url = URL(string: "swifter://success")!
+        let url = URL(string: "tweettestapp://success")!
         
-        swifter?.authorize(with: url, presentFrom: fromController, success: { _ in
+        swifter.authorize(with: url, presentFrom: fromController, success: { _ in
             completion()
         }, failure: failureHandler)
     }
     
-    func fetchTwitterHomeStream(completion: (([Tweet]) -> Void)?) {
+    func fetchTwitterHomeStream(givenSinceID: String?, givenMaxID: String?, completion: (([Tweet]) -> Void)?) {
         let failureHandler: (Error) -> Void = { error in
             print(error)
         }
         
-        self.swifter?.getHomeTimeline(count: 50, success: { json in
+        self.swifter.getHomeTimeline(count: 10, sinceID: givenSinceID, maxID: givenMaxID, success: { json in
             print(json)
             
             guard let tweets = json.array else {

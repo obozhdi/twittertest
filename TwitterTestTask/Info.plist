@@ -27,7 +27,7 @@
 			<string>com.obodev.TwitterTestTask</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>swifter</string>
+				<string>tweettestapp</string>
 			</array>
 		</dict>
 	</array>
