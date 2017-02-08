@@ -52,13 +52,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: textTweetReuseIdentifier) as! TextTweetCell
         
         cell.avatarImgView.imageFromServerURL(urlString: Singleton.sharedInstance.tableArray[indexPath.row].avatarImgUrl!)
-        
         cell.nameLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].nameText
         cell.screennameLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].screennameText
         cell.tweetTextLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].tweetTextText
-        cell.timestampLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].timestampTextl!
-        
-        //Wed Dec 29 11:17:58 +0000 2010
+        cell.timestampLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].timestampTextl
         
         return cell
     }
