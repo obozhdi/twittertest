@@ -26,7 +26,6 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
                 
                 if tweets.count > 0 {
                     Singleton.sharedInstance.sinceID = tweets.last?.tweetID
-                    print("YYYYYYYYYYY \(Singleton.sharedInstance.sinceID)")
                 }
                 
                 Singleton.sharedInstance.tableArray = tweets

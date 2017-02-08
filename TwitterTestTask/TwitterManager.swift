@@ -32,7 +32,7 @@ final class TwitterManager: NSObject {
         }
         
         self.swifter.getHomeTimeline(count: 10, sinceID: givenSinceID, maxID: givenMaxID, success: { json in
-            print(json)
+//            print(json)
             
             guard let tweets = json.array else {
                 completion?([])
