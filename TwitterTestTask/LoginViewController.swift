@@ -14,57 +14,19 @@ import SafariServices
 
 class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
     
-    var swifter: Swifter
     var tweets : [JSON] = []
-    
-    required init?(coder aDecoder: NSCoder) {
-        self.swifter = Swifter(consumerKey: "RErEmzj7ijDkJr60ayE2gjSHT", consumerSecret: "SbS0CHk11oJdALARa7NDik0nty4pXvAxdt7aj0R5y1gNzWaNEx")
-        super.init(coder: aDecoder)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
-    func fetchTwitterHomeStream(completion: (() -> Void)?) {
-        let failureHandler: (Error) -> Void = { error in
-            self.alert(title: "Error", message: error.localizedDescription)
-        }
-        
-        self.swifter.getHomeTimeline(count: 50, success: { json in
-            print(json)
-            
-            guard let tweets = json.array else {
-                completion?()
-                
-                return
-            }
-            
-            var tweetsArray: [Tweet] = []
-            
-            for i in tweets {
-                let tweetObject = Tweet.init(json: i)
-                tweetsArray.append(tweetObject)
-            }
-            
-            Singleton.sharedInstance.tableArray = tweetsArray
-            completion?()
-        }, failure: failureHandler)
-    }
     
     @IBAction func getTweets(_ sender: Any) {
         let failureHandler: (Error) -> Void = { error in
             self.alert(title: "Error", message: error.localizedDescription)
         }
         
-        let url = URL(string: "swifter://success")!
-        
-        swifter.authorize(with: url, presentFrom: self, success: { _ in
-            self.fetchTwitterHomeStream(completion: { 
+        TwitterManager.sharedInstance.auth(fromController: self, completion: {
+            TwitterManager.sharedInstance.fetchTwitterHomeStream(completion: { (tweets) in
+                Singleton.sharedInstance.tableArray = tweets
                 self.performSegue(withIdentifier: "ShowTabbarController", sender: nil)
             })
-        }, failure: failureHandler)
+        }, failureHandler: failureHandler)
     }
     
     func alert(title: String, message: String) {
