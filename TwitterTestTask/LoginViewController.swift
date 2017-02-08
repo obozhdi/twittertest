@@ -32,7 +32,7 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
             self.alert(title: "Error", message: error.localizedDescription)
         }
         
-        self.swifter.getHomeTimeline(count: 1, success: { json in
+        self.swifter.getHomeTimeline(count: 50, success: { json in
             print(json)
             
             guard let tweets = json.array else {
