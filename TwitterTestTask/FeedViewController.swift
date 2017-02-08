@@ -31,6 +31,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     let imageTweetHeight: CGFloat = 310.0
     let textTweetReuseIdentifier:  String = "textTweetCell"
     let imageTweetReuseIdentifier: String = "imageTweetCell"
+    @IBOutlet weak var tableView: UITableView!
+    var refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,21 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         let image = UIImage(named: "navbar_bg")
         self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+        
+        self.tableView.addSubview(refreshControl)
+        
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+    }
+    
+    func refreshData() {
+        TwitterManager.sharedInstance.fetchTwitterHomeStream { (tweets) in
+            Singleton.sharedInstance.tableArray = tweets
+            
+            DispatchQueue.main.async(execute: { () -> Void in
+                self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
+            })
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
