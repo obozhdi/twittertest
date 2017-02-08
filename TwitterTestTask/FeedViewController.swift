@@ -33,6 +33,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     let imageTweetReuseIdentifier: String = "imageTweetCell"
     @IBOutlet weak var tableView: UITableView!
     var refreshControl = UIRefreshControl()
+    
+    var isLoaded: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,16 +49,33 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func refreshData() {
-        TwitterManager.sharedInstance.fetchTwitterHomeStream { (tweets) in
-            Singleton.sharedInstance.tableArray = tweets
-            
-            DispatchQueue.main.async(execute: { () -> Void in
-                self.tableView.reloadData()
-                self.refreshControl.endRefreshing()
-            })
-        }
+        self.getData(givenSinceID: nil, givenMaxID: nil)
     }
     
+    func getData(givenSinceID: String?, givenMaxID: String?) {
+        TwitterManager.sharedInstance.fetchTwitterHomeStream(givenSinceID: givenSinceID, givenMaxID: givenMaxID, completion: { (tweets) in
+            
+            if givenSinceID == nil {
+                Singleton.sharedInstance.tableArray = tweets
+                self.isLoaded = false
+            } else {
+                Singleton.sharedInstance.tableArray += tweets
+            }
+            
+            if tweets.count > 0 {
+                Singleton.sharedInstance.sinceID = tweets.last?.tweetID
+                
+                DispatchQueue.main.async(execute: { () -> Void in
+                    self.tableView.reloadData()
+                    self.refreshControl.endRefreshing()
+                })
+            } else {
+                self.isLoaded = true
+            }
+            
+        })
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Singleton.sharedInstance.tableArray.count
     }
@@ -73,6 +92,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.screennameLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].screennameText
         cell.tweetTextLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].tweetTextText
         cell.timestampLabel.text = Singleton.sharedInstance.tableArray[indexPath.row].timestampTextl
+        
+        if (indexPath.row == Singleton.sharedInstance.tableArray.count - 1) && !self.isLoaded {
+            self.isLoaded = true
+            self.getData(givenSinceID: nil, givenMaxID: Singleton.sharedInstance.sinceID)
+        }
         
         return cell
     }

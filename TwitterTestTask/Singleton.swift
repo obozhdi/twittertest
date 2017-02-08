@@ -11,6 +11,8 @@ import SwifteriOS
 
 final class Singleton {
     var tableArray: [Tweet] = []
+    var sinceID: String?
+    var maxID: String?
     
     init() { }
     
