@@ -47,6 +47,26 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.navigationBar.setBackgroundImage(image, for: .default)
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
         
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        
+        if !launchedBefore  {
+            print("First launch, setting UserDefault.")
+            avatarsOn = true
+            UserDefaults.standard.set(avatarsOn, forKey: "onOff")
+        } else {
+            print("Not first launch.")
+            avatarsOn = UserDefaults.standard.bool(forKey: "onOff")
+            print(UserDefaults.standard.bool(forKey: "onOff"))
+        }
+        
+        if UserDefaults.standard.bool(forKey: "onOff") == false {
+            avatarWidth = 0
+            self.hideAvatarsBtn.setTitle("Show", for: .normal)
+        } else {
+            avatarWidth = 50
+            self.hideAvatarsBtn.setTitle("Hide", for: .normal)
+        }
+        
         UserDefaults.standard.set(true, forKey: "onOff")
         avatarsOn = UserDefaults.standard.bool(forKey: "onOff") as Bool!
         
@@ -56,32 +76,20 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func showHideAvatars(_ sender: Any) {
-//        if !UserDefaults.standard.bool(forKey: "onOff") {
-//            UserDefaults.standard.set(false, forKey: "onOff")
-//            print("avatars off")
-//            avatarsOn = !avatarsOn
-//            self.hideAvatarsBtn.setTitle("Hide", for: .normal)
-//            self.avatarWidth = 0
-//            self.tableView.reloadData()
-//        } else {
-//            print("avatars on")
-//            avatarsOn = !avatarsOn
-//            self.hideAvatarsBtn.setTitle("Show", for: .normal)
-//            self.avatarWidth = 50
-//            UserDefaults.standard.set(false, forKey: "onOff")
-//            self.tableView.reloadData()
-//        }
-        
         if avatarsOn!{
             print("avatars off")
-            avatarsOn = !avatarsOn
+            avatarsOn = !avatarsOn!
             self.hideAvatarsBtn.setTitle("Show", for: .normal)
             self.avatarWidth = 0
+            UserDefaults.standard.set(false, forKey: "onOff")
+            print(UserDefaults.standard.bool(forKey: "onOff"))
         } else {
             print("avatars on")
             avatarsOn = !avatarsOn!
             self.hideAvatarsBtn.setTitle("Hide", for: .normal)
             self.avatarWidth = 50
+            UserDefaults.standard.set(true, forKey: "onOff")
+            print(UserDefaults.standard.bool(forKey: "onOff"))
         }
         self.tableView.reloadData()
     }
