@@ -94,14 +94,14 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func getData(givenSinceID: String?, givenMaxID: String?) {
         TwitterManager.sharedInstance.fetchTwitterHomeStream(givenSinceID: givenSinceID, givenMaxID: givenMaxID, completion: { (tweets) in
             
-            if givenSinceID == nil {
+            if givenMaxID == nil {
                 TweetStorage.sharedInstance.tableArray = tweets
-                self.isLoaded = false
             } else {
                 TweetStorage.sharedInstance.tableArray += tweets
             }
             
             if tweets.count > 0 {
+                self.isLoaded = false
                 TweetStorage.sharedInstance.sinceID = tweets.last?.tweetID
                 
                 DispatchQueue.main.async(execute: { () -> Void in
@@ -111,7 +111,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             } else {
                 self.isLoaded = true
             }
-            
         })
     }
 
@@ -133,10 +132,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.timestampLabel.text = TweetStorage.sharedInstance.tableArray[indexPath.row].timestampTextl
         cell.avatarWidthConstraint.constant = self.avatarWidth
         
-//        if (indexPath.row == Singleton.sharedInstance.tableArray.count - 1) && !self.isLoaded {
-//            self.isLoaded = true
-//            self.getData(givenSinceID: nil, givenMaxID: Singleton.sharedInstance.sinceID)
-//        }
+        if (indexPath.row == TweetStorage.sharedInstance.tableArray.count - 1) && !self.isLoaded {
+            self.isLoaded = true
+            self.getData(givenSinceID: nil, givenMaxID: TweetStorage.sharedInstance.sinceID)
+        }
         
         return cell
     }
